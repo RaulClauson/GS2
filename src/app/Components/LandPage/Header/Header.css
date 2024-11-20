@@ -1,0 +1,173 @@
+header {
+  width: 100%;
+  height: 100dvh;
+  border: 2vh solid var(--black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-x);
+  transition: 1s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  height: 100dvh;
+  border: 2vh solid var(--black);
+  top: -2vh;
+  left: -2vh;
+  right: -2vh;
+  border-radius: 0px;
+  transition: 1s ease;
+}
+
+.hide {
+  transform: scaleY(1.5) scaleX(1.1);
+  width: 100%;
+  height: 100dvh;
+  border: 2vh solid var(--black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-x);
+  transition: 1s ease;
+}
+.hide::before {
+  content: "";
+  height: 100dvh;
+  border: 2vh solid var(--black);
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+}
+
+nav {
+  width: 100%;
+  height: 66px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  font-family: var(--font-neue);
+  font-weight: 600;
+  font-size: var(--font-size-s);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  color: var(--black);
+  z-index: 1000;
+}
+
+.entrar {
+  width: 120px;
+  height: 100%;
+  background-color: var(--black);
+  border-bottom-left-radius: var(--br);
+  padding: 0.5vh 0.8vh 1.7vh 1.7vh;
+}
+
+.entrar::before {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  right: 120px;
+  height: 100%;
+  width: 2vh;
+  border-top-right-radius: var(--br);
+  box-shadow: 0 -1.6vh 0 0 var(--black); /* This is where the magic happens! */
+}
+.entrar::after {
+  content: "";
+  position: absolute;
+
+  top: 66px;
+  right: 0;
+  height: 100%;
+  width: 2vh;
+  border-top-right-radius: var(--br);
+  box-shadow: 0 -1.6vh 0 0 var(--black); /* This is where the magic happens! */
+}
+
+.logo {
+  width: 120px;
+  height: 100%;
+  background-color: var(--black);
+  border-bottom-right-radius: var(--br);
+  pointer-events: auto;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 120px;
+  height: 100%;
+  width: 2vh;
+  border-top-left-radius: var(--br);
+  box-shadow: 0 -1.6vh 0 0 var(--black); /* This is where the magic happens! */
+}
+.logo::after {
+  content: "";
+  position: absolute;
+
+  top: 66px;
+  left: 0;
+  height: 100%;
+  width: 2vh;
+  border-top-left-radius: var(--br);
+  box-shadow: 0 -1.6vh 0 0 var(--black); /* This is where the magic happens! */
+}
+
+.entrar button {
+  background-color: var(--color);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--br-s);
+  pointer-events: auto;
+}
+
+.entrar button:hover {
+  opacity: 0.9;
+}
+
+nav ul {
+  width: 100%;
+  max-width: 400px;
+  height: -webkit-fill-available;
+  margin-top: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--white);
+  border-radius: var(--br-m);
+  padding: 6px;
+  pointer-events: auto;
+}
+nav ul li {
+  background-color: var(--color);
+  border-radius: var(--br-s);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("https://res.cloudinary.com/dr0nki74e/image/upload/v1732130188/Global%20Solution%202/Logo/ompeziedcfplj740rfns.gif");
+  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

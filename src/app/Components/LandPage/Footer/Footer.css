@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.physics-container {
+  width: 100%;
+  height: 60%;
+  background: url("https://res.cloudinary.com/dr0nki74e/image/upload/v1731863974/Global%20Solution%202/Stickers/s7qb6efm93uf7eppfepw.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 50% 50%;
+}
+@media (max-width: 888px) {
+  .physics-container {
+    background-size: 70%;
+  }
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  background: var(--black-opacity) !important;
+
+  border: 4px solid var(--black-opacity);
+  border-radius: 16px;
+}
+.physics-interaction-area {
+  pointer-events: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+}

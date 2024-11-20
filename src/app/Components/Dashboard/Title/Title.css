@@ -1,0 +1,13 @@
+p {
+  font-family: var(--font-neue);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  color: var(--color);
+  opacity: 0.7;
+}
+h1 {
+  font-family: var(--font-neue);
+  font-weight: 600;
+  font-size: var(--font-size-x);
+  color: var(--white);
+}
