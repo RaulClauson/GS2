@@ -16,6 +16,7 @@
 }
 @media (max-width: 888px) {
   .physics-container {
+    pointer-events: none;
     background-size: 70%;
   }
 }
