@@ -1,0 +1,35 @@
+.fim {
+  width: 100%;
+  height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-l);
+}
+.fim h1 {
+  text-align: center;
+  color: var(--black);
+}
+.fim a {
+  width: 133px;
+  height: 44px;
+
+  background: var(--color);
+  border-radius: var(--br-s);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-neue);
+  font-weight: 700;
+  font-size: var(--font-size-s);
+
+  color: var(--black);
+}
+
+.fim a:hover {
+  background: var(--black);
+  color: var(--white);
+}

@@ -19,16 +19,28 @@ const Inicio = () => {
           start: "1% top",
           end: "100% top",
           scrub: 1.5,
-          markers: true,
+          markers: false,
         },
         opacity: 1,
         duration: 1,
       });
       gsap.to(".image", {
         scrollTrigger: {
-          trigger: ".pin_container",
-          start: "top top",
-          end: "100% top",
+          trigger: "#inicio",
+          start: "1% top",
+          end: "50% top",
+          scrub: 1.5,
+          markers: false,
+        },
+        scale: 1.1,
+        height: "100lvh",
+        duration: 1,
+      });
+      gsap.to(".image2", {
+        scrollTrigger: {
+          trigger: "#inicio",
+          start: "1% top",
+          end: "50% top",
           scrub: 1.5,
           markers: false,
         },
@@ -72,7 +84,13 @@ const Inicio = () => {
       <div className="pin_container">
         <img
           className="image"
-          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732125405/Global%20Solution%202/Start/rnrc2ayfw43653gwkgjd.jpg"
+          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732200384/Global%20Solution%202/Start/u8k6kzellhg9cf1ueer0.jpg"
+          alt="Fonte de energia limpa - Eólica"
+          style={{ height: "80lvh", transform: "scale(1)" }}
+        />
+        <img
+          className="image2"
+          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732200382/Global%20Solution%202/Start/cylyg1yjsyzaubkcngoy.png"
           alt="Fonte de energia limpa - Eólica"
           style={{ height: "80lvh", transform: "scale(1)" }}
         />

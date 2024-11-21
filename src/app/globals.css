@@ -4,9 +4,9 @@
 
 :root {
   --font-size-xs: 12px;
-  --font-size-s: 15px;
+  --font-size-s: clamp(0.75rem, 0.7232rem + 0.1339vw, 0.9375rem); /*15px-12px*/
   --font-size-m: clamp(0.9375rem, 0.8929rem + 0.2232vw, 1.25rem); /*20px-15px*/
-  --font-size-l: 32px;
+  --font-size-l: clamp(1.25rem, 1.1429rem + 0.5357vw, 2rem); /*32px-20px*/
   --font-size-x: 48px;
   --font-size-xx: clamp(2rem, 1.7143rem + 1.4286vw, 4rem); /*64px-32px*/
 
@@ -14,8 +14,8 @@
   --gap-m: 20px;
   --gap-l: 45px;
 
-  --padding-vh: 4vh;
-  --padding-vw: 4vw;
+  --padding-vh: 6vh;
+  --padding-vw: 6vw;
 
   --black: #1a1a1a;
   --soft-black: #252525;
@@ -36,7 +36,7 @@ body {
   color: var(--white);
   background: var(--black);
   font-family: var(--font);
-  padding: 2vh;
+  padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -47,8 +47,14 @@ h1 {
   font-size: var(--font-size-xx);
   line-height: 1.2;
   margin: 0;
+}
+h3 {
+  font-family: var(--font-neue);
+  font-weight: 600;
+  font-size: var(--font-size-l);
+  line-height: 1.2;
 
-  color: var(--white);
+  color: var(--black);
 }
 p {
   font-family: var(--font-neue);

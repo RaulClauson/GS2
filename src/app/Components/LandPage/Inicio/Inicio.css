@@ -10,6 +10,7 @@
   top: -2vh;
   padding-top: 2vh;
   z-index: 2;
+  overflow: hidden;
 }
 #inicio .content {
   width: 100%;
@@ -65,7 +66,7 @@
   z-index: 2;
 }
 #inicio img {
-  width: 100%;
+  width: -webkit-fill-available;
   height: 100lvh;
   display: flex;
   justify-content: center;
@@ -73,11 +74,14 @@
   object-fit: cover;
   border-radius: var(--br-m);
   z-index: -1;
-}
-.image2 {
   position: absolute;
   top: 0;
-  z-index: 1000;
+  left: 2vh;
+  right: 2vh;
+  pointer-events: none;
+}
+.image2 {
+  z-index: 1000 !important;
 }
 
 .gradient {
@@ -85,8 +89,7 @@
   height: 50%;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
   position: absolute;
-  bottom: -4.8lvh;
+  bottom: 0;
   left: 0;
-  transform: scale(1.1);
   z-index: 1;
 }

@@ -10,7 +10,7 @@
   width: 40%;
   position: absolute;
   right: var(--padding-vw);
-  bottom: 0;
+  bottom: var(--padding-vh);
 }
 @media (max-width: 888px) {
   .intro p {
