@@ -63,39 +63,39 @@ const Slide = () => {
           trigger: ".slide",
           start: "-50% top",
           end: "10% top",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none play reverse",
           markers: false,
         },
         opacity: 1,
-        height: "100%",
-        ease: "power2.inOut",
-        duration: 1,
+        width: "100%",
+        ease: "power3.inOut",
+        duration: 2,
       });
       gsap.to(".slide_img2", {
         scrollTrigger: {
           trigger: ".slide",
           start: "10% top",
           end: "33% top",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none play reverse",
           markers: false,
         },
         opacity: 1,
-        height: "100%",
-        ease: "power2.inOut",
-        duration: 1,
+        width: "100%",
+        ease: "power3.inOut",
+        duration: 2,
       });
       gsap.to(".slide_img3", {
         scrollTrigger: {
           trigger: ".slide",
           start: "33% top",
           end: "100% top",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none play reverse",
           markers: false,
         },
         opacity: 1,
-        height: "100%",
-        ease: "power2.inOut",
-        duration: 1,
+        width: "100%",
+        ease: "power3.inOut",
+        duration: 2,
       });
     });
 
@@ -150,19 +150,19 @@ const Slide = () => {
             src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732150849/Global%20Solution%202/Slide/jslzpfjethgzcbtjxhcx.png"
             alt=""
             className="slide_img1"
-            style={{ height: "0%" }}
+            style={{ width: "0%" }}
           />
           <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732150849/Global%20Solution%202/Slide/jslzpfjethgzcbtjxhcx.png"
+            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732202264/Global%20Solution%202/Slide/hl5salvkydgs9hkzvmbj.jpg"
             alt=""
             className="slide_img2"
-            style={{ height: "0%" }}
+            style={{ width: "0%" }}
           />
           <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732150849/Global%20Solution%202/Slide/jslzpfjethgzcbtjxhcx.png"
+            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732202112/Global%20Solution%202/Slide/rded2emc6okdpmpuboqe.jpg"
             alt=""
             className="slide_img3"
-            style={{ height: "0%" }}
+            style={{ width: "0%" }}
           />
         </div>
       </div>
