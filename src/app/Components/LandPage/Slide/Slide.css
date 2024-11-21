@@ -4,6 +4,8 @@
   margin-top: var(--padding-vh);
   position: relative;
   overflow: hidden;
+  margin-top: 22lvh;
+  z-index: 2;
 }
 .slide-content {
   width: 100%;
@@ -14,7 +16,7 @@
   position: absolute;
 }
 .slide-content-text {
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -38,7 +40,7 @@
   right: var(--padding-vw);
 }
 .slide-content-img {
-  width: 100%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -56,9 +58,11 @@
 }
 @media (max-width: 555px) {
   .slide-content-text {
+    width: 100%;
     position: absolute;
   }
   .slide-content-img {
+    width: 100%;
     opacity: 0.2;
   }
 }

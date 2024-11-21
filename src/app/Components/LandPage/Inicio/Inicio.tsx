@@ -32,7 +32,9 @@ const Inicio = () => {
           scrub: 1.5,
           markers: false,
         },
-        scale: 1.1,
+        left: "0vh",
+        right: "0vh",
+        borderRadius: "0px",
         height: "100lvh",
         duration: 1,
       });
@@ -44,7 +46,9 @@ const Inicio = () => {
           scrub: 1.5,
           markers: false,
         },
-        scale: 1.1,
+        left: "0vh",
+        right: "0vh",
+        borderRadius: "0px",
         height: "100lvh",
         duration: 1,
       });

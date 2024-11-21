@@ -1,0 +1,16 @@
+.path_2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000000;
+  pointer-events: none;
+}
+.path_2_2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;
+  pointer-events: none;
+}

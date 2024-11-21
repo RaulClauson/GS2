@@ -76,6 +76,18 @@ const Footer = () => {
       },
     });
 
+    // Add scroll handling to disable pointer events while scrolling
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      render.canvas.style.pointerEvents = "none";
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        render.canvas.style.pointerEvents = "auto";
+      }, 200);
+    };
+
+    render.canvas.addEventListener("wheel", handleScroll);
+
     // Add mouse control
     const mouse = Matter.Mouse.create(render.canvas);
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -309,6 +321,7 @@ const Footer = () => {
     return () => {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
+      render.canvas.removeEventListener("wheel", handleScroll);
       render.canvas.remove();
       Matter.Engine.clear(engine);
       window.removeEventListener("deviceorientation", handleOrientation);

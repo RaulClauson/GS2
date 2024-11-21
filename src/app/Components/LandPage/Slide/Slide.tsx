@@ -1,6 +1,7 @@
 "use client";
 
 import "./Slide.css";
+import Path_2 from "../Paths/Path_2/Path_2";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
@@ -165,6 +166,7 @@ const Slide = () => {
             style={{ width: "0%" }}
           />
         </div>
+        <Path_2 />
       </div>
     </div>
   );

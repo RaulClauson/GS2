@@ -1,8 +1,9 @@
-.path_1 {
+.path_3 {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10000;
+  z-index: 1000000;
+  margin-top: -5lvh;
   pointer-events: none;
 }

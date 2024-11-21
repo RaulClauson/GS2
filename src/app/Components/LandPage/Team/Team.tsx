@@ -1,6 +1,7 @@
 "use client";
 
 import "./Team.css";
+import Path_3 from "../Paths/Path_3/Path_3";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
@@ -107,6 +108,7 @@ const Team = () => {
           </div>
         </div>
       </div>
+      <Path_3 />
     </div>
   );
 };
