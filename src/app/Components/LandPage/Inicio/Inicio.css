@@ -3,6 +3,14 @@
   height: 200dvh;
   position: relative;
 }
+.pin_container {
+  width: 100%;
+  height: 100lvh;
+  position: absolute;
+  top: -2vh;
+  padding-top: 2vh;
+  z-index: 2;
+}
 #inicio .content {
   width: 100%;
   height: 80lvh;
@@ -12,20 +20,44 @@
   justify-content: center;
   gap: var(--gap-l);
 
-  margin-top: -100vh;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 3;
 }
-button:hover {
+#inicio h1 {
+  width: 70%;
+}
+@media (max-width: 888px) {
+  #inicio h1 {
+    width: 95%;
+  }
+}
+#inicio a {
+  width: 133px;
+  height: 44px;
+
+  background: var(--color);
+  border-radius: var(--br-s);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-neue);
+  font-weight: 700;
+  font-size: var(--font-size-s);
+
+  color: var(--black);
+}
+
+#inicio a:hover {
   background: var(--black);
   color: var(--white);
 }
 #inicio .svg_container {
-  margin-top: -100vh;
   width: 100%;
   height: 100dvh;
-  position: sticky;
+  position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
@@ -35,8 +67,6 @@ button:hover {
 #inicio img {
   width: 100%;
   height: 100lvh;
-  position: sticky;
-  top: 2vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -52,10 +82,10 @@ button:hover {
 
 .gradient {
   width: 100%;
-  height: 51%;
+  height: 50%;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
   position: absolute;
-  bottom: 0;
+  bottom: -4.8lvh;
   left: 0;
   transform: scale(1.1);
   z-index: 1;

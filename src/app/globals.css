@@ -5,10 +5,10 @@
 :root {
   --font-size-xs: 12px;
   --font-size-s: 15px;
-  --font-size-m: 20px;
+  --font-size-m: clamp(0.9375rem, 0.8929rem + 0.2232vw, 1.25rem); /*20px-15px*/
   --font-size-l: 32px;
   --font-size-x: 48px;
-  --font-size-xx: 64px;
+  --font-size-xx: clamp(2rem, 1.7143rem + 1.4286vw, 4rem); /*64px-32px*/
 
   --gap-s: 10px;
   --gap-m: 20px;
@@ -76,6 +76,10 @@ button {
   font-size: var(--font-size-s);
 
   color: var(--black);
+}
+button:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 @layer utilities {

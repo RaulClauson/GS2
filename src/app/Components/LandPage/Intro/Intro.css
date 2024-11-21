@@ -12,3 +12,8 @@
   right: var(--padding-vw);
   bottom: 0;
 }
+@media (max-width: 888px) {
+  .intro p {
+    width: 70%;
+  }
+}

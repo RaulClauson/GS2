@@ -36,11 +36,14 @@ header::before {
 }
 .hide::before {
   content: "";
+  position: absolute;
   height: 100dvh;
   border: 2vh solid var(--black);
-  top: 0;
-  left: 0;
+  top: -2vh;
+  left: -2vh;
+  right: -2vh;
   border-radius: 0px;
+  transition: 1s ease;
 }
 
 nav {
