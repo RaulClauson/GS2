@@ -24,7 +24,7 @@ const Path_2 = () => {
   }, []);
   return (
     <>
-      {/*       <svg
+      <svg
         width="22"
         height="100lvh"
         viewBox="0 0 22 1000"
@@ -57,7 +57,7 @@ const Path_2 = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-      </svg> */}
+      </svg>
     </>
   );
 };

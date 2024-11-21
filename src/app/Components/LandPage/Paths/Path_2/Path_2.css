@@ -5,6 +5,7 @@
   transform: translateX(-50%);
   z-index: 1000000;
   pointer-events: none;
+  height: 100lvh;
 }
 .path_2_2 {
   position: absolute;
@@ -13,4 +14,5 @@
   transform: translateX(-50%);
   z-index: 100000;
   pointer-events: none;
+  height: 100lvh;
 }

@@ -13,21 +13,21 @@ const Path_3 = () => {
       scrollTrigger: {
         trigger: ".team",
         start: "0% center",
-        end: "200% center",
+        end: "200% bottom",
         scrub: 1.5,
         markers: false,
       },
       strokeDasharray: "3000",
-      strokeDashoffset: 200,
+      strokeDashoffset: 600,
       duration: 1,
     });
   }, []);
   return (
     <>
-      {/*       <svg
+      <svg
         width="1920"
-        height="1375"
-        viewBox="0 0 1920 1375"
+        height="1935"
+        viewBox="0 0 1920 1935"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="path_3"
@@ -45,8 +45,8 @@ const Path_3 = () => {
 
       <svg
         width="1920"
-        height="1375"
-        viewBox="0 0 1920 1375"
+        height="1935"
+        viewBox="0 0 1920 1935"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="path_3"
@@ -59,7 +59,7 @@ const Path_3 = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-      </svg> */}
+      </svg>
     </>
   );
 };
