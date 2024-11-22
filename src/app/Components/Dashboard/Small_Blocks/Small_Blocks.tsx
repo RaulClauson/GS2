@@ -1,10 +1,10 @@
 "use client";
 
 import "./Small_Blocks.css";
-import { useMonth } from "@/context/MonthContext";
+import { useMonthContext } from "@/context/MonthContext";
 
 const Small_Blocks = () => {
-  const { monthData } = useMonth();
+  const { monthData } = useMonthContext();
 
   return (
     <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-3 small_blocks">

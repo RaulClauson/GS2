@@ -9,10 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useMonth } from "@/context/MonthContext";
+import { useMonthContext } from "@/context/MonthContext";
 
 const Eletronicos = () => {
-  const { monthData } = useMonth();
+  const { monthData } = useMonthContext();
   const eletronicos = monthData?.eletronicos || [];
 
   return (

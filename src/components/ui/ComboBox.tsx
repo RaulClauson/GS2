@@ -14,7 +14,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useMonth } from "@/context/MonthContext";
+import { useMonthContext } from "@/context/MonthContext";
 import { cn } from "@/lib/utils";
 import { Check, ChevronsUpDown } from "lucide-react";
 import * as React from "react";
@@ -36,7 +36,7 @@ const months = [
 
 export function ComboboxDemo() {
   const [open, setOpen] = React.useState(false);
-  const { selectedMonth, setSelectedMonth } = useMonth();
+  const { selectedMonth, setSelectedMonth } = useMonthContext();
 
   return (
     <Popover open={open} onOpenChange={setOpen}>

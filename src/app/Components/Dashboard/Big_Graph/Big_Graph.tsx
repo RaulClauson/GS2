@@ -2,7 +2,7 @@
 
 import "./Big_Graph.css";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useMonth } from "@/context/MonthContext";
+import { useMonthContext } from "@/context/MonthContext";
 import {
   Bar,
   BarChart,
@@ -15,7 +15,22 @@ import {
 
 const Big_Graph = () => {
   const { monthData, selectedMonth, monthlyData, setSelectedMonth } =
-    useMonth();
+    useMonthContext();
+
+  const monthOrder = [
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+  ];
 
   const yearlyTotals = Object.values(monthlyData).reduce(
     (acc, data) => ({
@@ -25,10 +40,10 @@ const Big_Graph = () => {
     { consumo: 0, gasto: 0 }
   );
 
-  const chartData = Object.entries(monthlyData).map(([month, data]) => ({
+  const chartData = monthOrder.map((month) => ({
     name: month.charAt(0).toUpperCase() + month.slice(1),
-    gasto: data.gasto,
-    consumo: data.consumo,
+    gasto: monthlyData[month]?.gasto || 0,
+    consumo: monthlyData[month]?.consumo || 0,
     isSelected: month === selectedMonth,
     month: month,
   }));
