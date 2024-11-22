@@ -15,8 +15,12 @@ const Authentication = () => {
     }
   }, []);
 
-  //sessionStorage clean
-  sessionStorage.clear();
+  useEffect(() => {
+    // Ensure sessionStorage is cleared only on the client side
+    if (typeof window !== "undefined") {
+      sessionStorage.clear();
+    }
+  }, []);
 
   const [isLogin, setIsLogin] = useState(true);
   return (
