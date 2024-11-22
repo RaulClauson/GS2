@@ -1,0 +1,20 @@
+.add_content {
+  background-color: var(--black);
+  border: 2px solid var(--soft-black);
+}
+.add_input {
+  background-color: var(--black);
+  color: var(--white);
+  border: 2px solid var(--soft-black);
+}
+.conta_button {
+  background-color: var(--color);
+  color: var(--black);
+  font-family: var(--font-neue);
+  font-weight: 600;
+  font-size: var(--font-size-s);
+}
+.conta_button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}

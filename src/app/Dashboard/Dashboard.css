@@ -11,12 +11,12 @@ main {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-l);
+  gap: var(--gap-m);
   padding: var(--gap-l) var(--padding-vw);
 }
 span {
   color: var(--color);
 }
 .dashboard_divider {
-  gap: var(--gap-l);
+  gap: var(--gap-m);
 }

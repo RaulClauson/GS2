@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: var(--gap-l);
   width: 100%;
+  max-height: 540px;
 }
 .big_graph_title {
   font-size: var(--font-size-m);
@@ -23,7 +24,6 @@
 }
 .big_grath_box_info {
   border-left: 2px solid var(--soft-black);
-  height: 100%;
   padding: 25px 30px;
 }
 .big_grath_box_info p:first-child {

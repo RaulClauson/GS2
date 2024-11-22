@@ -39,7 +39,7 @@ const Dashboard = () => {
           <div className="dashboard">
             <Title />
             <Small_Blocks />
-            <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-[68fr_32fr] dashboard_divider">
+            <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-[67.5fr_33fr] dashboard_divider">
               <Big_Graph />
               <Eletronicos />
             </div>

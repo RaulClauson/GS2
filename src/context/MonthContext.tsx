@@ -3,9 +3,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 type ElectronicData = {
+  id: number;
   eletronico: string;
   marca: string;
   consumo: number;
+  ano: number;
+  status: string;
 };
 
 type MonthData = {
@@ -80,9 +83,12 @@ export function MonthProvider({ children }: { children: React.ReactNode }) {
         // Associa os eletrônicos ao mês atual
         equipamentosUsuario.forEach((equipamento: any) => {
           const eletronicData: ElectronicData = {
+            id: equipamento.id,
             eletronico: equipamento.nome,
             marca: equipamento.marca,
             consumo: equipamento.consumo,
+            ano: equipamento.ano,
+            status: equipamento.status,
           };
 
           // Adiciona os eletrônicos ao mês selecionado
