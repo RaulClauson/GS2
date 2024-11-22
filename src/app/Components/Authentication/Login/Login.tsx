@@ -1,6 +1,10 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Login = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,8 +19,11 @@ const Login = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
       );
 
       if (user) {
-        alert("Login bem-sucedido!");
-        // Aqui você pode redirecionar o usuário ou atualizar o estado de login
+        localStorage.setItem("userName", user.nome);
+        localStorage.setItem("userEmail", user.emailUs);
+        localStorage.setItem("logado", "true");
+
+        router.push("/Dashboard");
       } else {
         alert("Email ou senha incorretos.");
       }

@@ -3,17 +3,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2vh;
+  z-index: 1;
 }
 .dashboard {
-  max-width: 1440px;
   width: 100%;
   height: 100%;
   margin-top: 80px;
   display: flex;
   flex-direction: column;
   gap: var(--gap-l);
-  padding-top: var(--gap-l);
+  padding: var(--gap-l) var(--padding-vw);
 }
 span {
   color: var(--color);

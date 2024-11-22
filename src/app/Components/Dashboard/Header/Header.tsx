@@ -9,10 +9,22 @@ import {
   UserRound,
 } from "lucide-react";
 import "./Header.css";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+  const router = useRouter();
   const [menu, setMenu] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+
+  // Fetch user data from localStorage
+  useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    const storedUserEmail = localStorage.getItem("userEmail");
+    if (storedUserName) setUserName(storedUserName);
+    if (storedUserEmail) setUserEmail(storedUserEmail);
+  }, []);
 
   // Add useEffect to handle click outside
   useEffect(() => {
@@ -26,6 +38,13 @@ const Header = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menu]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("logado");
+    router.push("/Authentication");
+  };
 
   return (
     <>
@@ -51,8 +70,8 @@ const Header = () => {
         <li>
           <button>
             <div>
-              <h1>Rafael Ronqui</h1>
-              <p>rafaelronqui@gmail.com</p>
+              <h1>{userName}</h1>
+              <p>{userEmail}</p>
             </div>
             <Settings size={17} />
           </button>
@@ -68,7 +87,7 @@ const Header = () => {
           </button>
         </li>
         <li>
-          <button className="logout">
+          <button className="logout" onClick={handleLogout}>
             <LogOut size={20} />
             Sair
           </button>

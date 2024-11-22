@@ -1,0 +1,34 @@
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000000000000000000000000000000;
+  background-color: var(--black);
+  animation: loading 0.5s 2s ease forwards;
+  pointer-events: none;
+}
+.loading img {
+  width: 550px;
+  opacity: 0;
+  animation: loading_img 0.3s 0.5s ease forwards;
+}
+@keyframes loading_img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

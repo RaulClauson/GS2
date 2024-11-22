@@ -1,5 +1,6 @@
 "use client";
 
+import "./Add.css";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -17,39 +18,39 @@ export function Add() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button className="conta_button">Adicionar conta</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] add_content">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
+          <DialogTitle>Conta do mês</DialogTitle>
+          <DialogDescription>Adicione a sua conta desse mês</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
+            <Label htmlFor="valor" className="text-right">
+              R$:
             </Label>
             <Input
-              id="name"
-              defaultValue="Pedro Duarte"
-              className="col-span-3"
+              id="valor"
+              defaultValue="200"
+              className="col-span-3 add_input"
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
+            <Label htmlFor="consumo" className="text-right">
+              KWH:
             </Label>
             <Input
-              id="username"
-              defaultValue="@peduarte"
-              className="col-span-3"
+              id="consumo"
+              defaultValue="300"
+              className="col-span-3 add_input"
             />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button type="submit" className="conta_button">
+            Adicionar
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

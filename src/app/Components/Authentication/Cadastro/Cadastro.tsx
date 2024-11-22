@@ -1,6 +1,56 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import React from "react";
+
 const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
+  const router = useRouter();
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target as HTMLFormElement);
+    const password = formData.get("password");
+    const confirmPassword = formData.get("confirmPassword");
+
+    if (password !== confirmPassword) {
+      alert("As senhas não coincidem.");
+      return;
+    }
+
+    const data = {
+      emailUs: formData.get("email"),
+      nome: formData.get("name"),
+      telefone: formData.get("telefone"),
+      cepUs: formData.get("CEP"),
+      senha: password,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8080/api/rest/usuario", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        localStorage.setItem("userName", data.nome as string);
+        localStorage.setItem("userEmail", data.emailUs as string);
+        localStorage.setItem("logado", "true");
+
+        router.push("/Dashboard");
+      } else {
+        alert("Erro ao realizar cadastro.");
+      }
+    } catch (error) {
+      console.error("Erro:", error);
+      alert("Erro ao realizar cadastro.");
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <fieldset>
         <h1>Cadastro</h1>
         <a onClick={() => setIsLogin(true)}>
@@ -8,6 +58,13 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
         </a>
       </fieldset>
       <input type="text" name="name" id="name" placeholder="Nome" required />
+      <input
+        type="text"
+        name="telefone"
+        id="telefone"
+        placeholder="Telefone"
+        required
+      />
       <input type="text" name="CEP" id="CEP" placeholder="CEP" required />
       <input
         type="email"
@@ -25,8 +82,8 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
       />
       <input
         type="password"
-        name="password"
-        id="password"
+        name="confirmPassword"
+        id="confirmPassword"
         placeholder="Confirmar senha"
         required
       />

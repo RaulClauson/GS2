@@ -27,3 +27,8 @@ h1 {
   background: var(--white);
   color: var(--black);
 }
+.date {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
+}

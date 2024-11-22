@@ -2,10 +2,22 @@
 
 import Cadastro from "../Components/Authentication/Cadastro/Cadastro";
 import Login from "../Components/Authentication/Login/Login";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import "./Authentication.css";
 
 const Authentication = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (localStorage.getItem("logado") === "true") {
+      router.push("/Dashboard");
+    }
+  }, []);
+
+  //sessionStorage clean
+  sessionStorage.clear();
+
   const [isLogin, setIsLogin] = useState(true);
   return (
     <section id="authentication">
