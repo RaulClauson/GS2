@@ -7,3 +7,6 @@
 .bg-muted {
   background: var(--soft-black);
 }
+.consumo_ele {
+  color: var(--color);
+}
