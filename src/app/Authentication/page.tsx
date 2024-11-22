@@ -26,6 +26,12 @@ const Authentication = () => {
   return (
     <section id="authentication">
       <div>
+        <a href="/" className="logo">
+          <img
+            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732225851/Global%20Solution%202/Logo/hqmwveovjkttgedyruyr.png"
+            alt=""
+          />
+        </a>
         {isLogin ? (
           <Login setIsLogin={setIsLogin} />
         ) : (
