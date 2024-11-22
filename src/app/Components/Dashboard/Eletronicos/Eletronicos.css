@@ -4,3 +4,6 @@
   color: var(--white);
   width: 100%;
 }
+.bg-muted {
+  background: var(--soft-black);
+}

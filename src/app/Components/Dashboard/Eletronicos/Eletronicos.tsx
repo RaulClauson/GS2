@@ -29,7 +29,7 @@ const Eletronicos = () => {
             <div key={device.eletronico} className="flex items-center">
               <Avatar className="h-9 w-9">
                 <AvatarImage
-                  src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${device.eletronico}`}
+                  src={`https://source.unsplash.com/random/100x100/?${device.eletronico}`}
                 />
                 <AvatarFallback>{device.eletronico[0]}</AvatarFallback>
               </Avatar>
