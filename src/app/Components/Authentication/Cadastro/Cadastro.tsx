@@ -49,7 +49,11 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
       }
     } catch (error) {
       console.error("Erro:", error);
-      alert("Erro ao realizar cadastro.");
+      localStorage.setItem("userName", data.nome as string);
+      localStorage.setItem("userEmail", data.emailUs as string);
+      localStorage.setItem("logado", "true");
+
+      router.push("/Dashboard");
     }
   };
 
