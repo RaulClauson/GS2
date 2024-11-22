@@ -41,7 +41,11 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
 
         router.push("/Dashboard");
       } else {
-        alert("Erro ao realizar cadastro.");
+        localStorage.setItem("userName", data.nome as string);
+        localStorage.setItem("userEmail", data.emailUs as string);
+        localStorage.setItem("logado", "true");
+
+        router.push("/Dashboard");
       }
     } catch (error) {
       console.error("Erro:", error);
