@@ -55,7 +55,8 @@ svg {
 .active {
   right: 17px;
   opacity: 1;
-  pointer-events: none;
+  pointer-events: all;
+  z-index: 60;
 }
 
 ul {

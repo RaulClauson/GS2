@@ -31,21 +31,23 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <MonthProvider>
+    <>
       <Loading />
-      <Header />
-      <main>
-        <div className="dashboard">
-          <Title />
-          <Small_Blocks />
-          <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-[68fr_32fr] dashboard_divider">
-            <Big_Graph />
-            <Eletronicos />
+      <MonthProvider>
+        <Header />
+        <main>
+          <div className="dashboard">
+            <Title />
+            <Small_Blocks />
+            <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-[68fr_32fr] dashboard_divider">
+              <Big_Graph />
+              <Eletronicos />
+            </div>
           </div>
-        </div>
-      </main>
-      <Typebot />
-    </MonthProvider>
+        </main>
+        <Typebot />
+      </MonthProvider>
+    </>
   );
 };
 
