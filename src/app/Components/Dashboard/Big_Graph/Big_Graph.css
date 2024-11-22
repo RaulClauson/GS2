@@ -1,0 +1,43 @@
+.big_graph {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--soft-black);
+  border-radius: var(--br-s);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+  width: 100%;
+}
+.big_graph_title {
+  font-size: var(--font-size-m);
+  font-family: var(--font);
+  font-weight: 600;
+}
+.big_graph_bar_chart:hover {
+  background-color: var(--soft-black);
+}
+.big_graph_header {
+  padding: 0 0 0 30px;
+  border-bottom: 2px solid var(--soft-black);
+}
+.big_grath_box_info {
+  border-left: 2px solid var(--soft-black);
+  height: 100%;
+  padding: 25px 30px;
+}
+.big_grath_box_info p:first-child {
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  color: var(--white);
+  opacity: 0.5;
+}
+.big_grath_box_info p:nth-child(2) {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  opacity: 1;
+  color: var(--color);
+}
+.recharts-tooltip-cursor {
+  opacity: 0.1;
+}

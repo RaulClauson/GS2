@@ -1,0 +1,6 @@
+.eletronicos_card {
+  background: transparent;
+  border: 2px solid var(--soft-black);
+  color: var(--white);
+  width: 100%;
+}

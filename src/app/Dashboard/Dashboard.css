@@ -4,7 +4,6 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 2vh;
-  margin-top: -2vh;
 }
 .dashboard {
   max-width: 1440px;
@@ -19,11 +18,6 @@ main {
 span {
   color: var(--color);
 }
-.small_graphs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.dashboard_divider {
   gap: var(--gap-l);
-  width: 100%;
-  height: 200px;
 }

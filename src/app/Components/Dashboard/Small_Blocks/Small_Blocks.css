@@ -1,0 +1,25 @@
+.small_blocks {
+  gap: var(--gap-l);
+}
+.small_block {
+  color: var(--white);
+  border: 2px solid var(--soft-black);
+  border-radius: var(--br-s);
+  padding: 20px 25px;
+}
+.small_block p {
+  font-weight: 400;
+  color: var(--white);
+}
+.small_block p:first-child {
+  font-size: var(--font-size-s);
+}
+.small_block p:nth-child(2) {
+  opacity: 1;
+  font-size: var(--font-size-l);
+  font-weight: 600;
+}
+.small_block p:nth-child(3) {
+  font-size: var(--font-size-xs);
+  opacity: 0.5;
+}

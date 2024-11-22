@@ -1,3 +1,10 @@
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-m);
+}
 p {
   font-family: var(--font-neue);
   font-weight: 500;
@@ -10,4 +17,13 @@ h1 {
   font-weight: 600;
   font-size: var(--font-size-x);
   color: var(--white);
+}
+.combobox {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--soft-black);
+}
+.combobox:hover {
+  background: var(--white);
+  color: var(--black);
 }

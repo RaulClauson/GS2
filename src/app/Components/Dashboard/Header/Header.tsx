@@ -32,7 +32,10 @@ const Header = () => {
       <header>
         <nav>
           <a href="" className="logo">
-            Logo
+            <img
+              src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732225851/Global%20Solution%202/Logo/hqmwveovjkttgedyruyr.png"
+              alt=""
+            />
           </a>
           <div>
             <button className="bell">
