@@ -1,12 +1,13 @@
-.conta_add_button {
-  background-color: var(--color);
-  color: var(--black);
+.conta_edit_button {
+  background-color: var(--black);
+  border: 1px solid var(--color);
+  color: var(--color);
   font-family: var(--font-neue);
   font-weight: 600;
   font-size: var(--font-size-s);
 }
-.conta_add_button:hover {
-  background-color: var(--white);
+.conta_edit_button:hover {
+  background-color: var(--color);
   color: var(--black);
 }
 

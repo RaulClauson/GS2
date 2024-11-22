@@ -9,14 +9,14 @@ const Small_Blocks = () => {
   return (
     <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-3 small_blocks">
       <StatsCard
-        title="Gasto"
-        value={`R$ ${monthData?.gasto || "0,00"}`}
-        description="Total gasto no mês"
-      />
-      <StatsCard
         title="Consumo"
         value={`${monthData?.consumo || "0"} KWH`}
         description="Total consumido no mês"
+      />
+      <StatsCard
+        title="Gasto"
+        value={`R$ ${monthData?.gasto || "0,00"}`}
+        description="Total gasto no mês"
       />
       <StatsCard
         title="Valor do KWH"

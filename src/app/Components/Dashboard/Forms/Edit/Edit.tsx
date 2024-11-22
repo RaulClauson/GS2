@@ -1,6 +1,6 @@
 "use client";
 
-import "./Add.css";
+import "./Edit.css";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -14,55 +14,58 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useMonthContext } from "@/context/MonthContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export function Add() {
+export function Edit() {
   const [open, setOpen] = useState(false);
+  const { monthData, selectedMonth } = useMonthContext();
   const [valor, setValor] = useState("");
   const [consumo, setConsumo] = useState("");
-  const { selectedMonth, monthlyData } = useMonthContext();
 
-  // Função para gerar ID aleatório de 4 dígitos
-  const generateId = () => {
-    const min = 1000; // Menor número de 4 dígitos
-    const max = 9999; // Maior número de 4 dígitos
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+  useEffect(() => {
+    if (monthData) {
+      setValor(monthData.gasto.toString());
+      setConsumo(monthData.consumo.toString());
+    }
+  }, [monthData, open]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!monthData?.id) {
+      console.error("ID da conta não encontrado");
+      return;
+    }
+
     const userEmail = localStorage.getItem("userEmail");
     if (!userEmail) return;
 
-    // Gera um ID de 4 dígitos
-    const newId = generateId();
-
     try {
-      const response = await fetch("http://localhost:8080/api/rest/conta", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: newId,
-          valor: parseFloat(valor),
-          consumo: parseFloat(consumo),
-          custoKwh: parseFloat(
-            (parseFloat(valor) / parseFloat(consumo)).toFixed(2)
-          ),
-          mes: selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1),
-          usuario: userEmail,
-        }),
-      });
+      const response = await fetch(
+        `http://localhost:8080/api/rest/conta/${monthData.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: monthData.id,
+            valor: parseFloat(valor),
+            consumo: parseFloat(consumo),
+            custoKwh: parseFloat(
+              (parseFloat(valor) / parseFloat(consumo)).toFixed(2)
+            ),
+            mes: selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1),
+            usuario: userEmail,
+          }),
+        }
+      );
 
       if (response.ok) {
-        setValor("");
-        setConsumo("");
         setOpen(false);
         window.location.reload();
       } else {
-        console.error("Erro ao adicionar conta");
+        console.error("Erro ao atualizar conta");
       }
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
@@ -72,15 +75,15 @@ export function Add() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="conta_add_button">Adicionar conta</Button>
+        <Button className="conta_edit_button" disabled={!monthData}>
+          Editar conta
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] add_content">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
-            <DialogTitle>Adicionar conta do mês</DialogTitle>
-            <DialogDescription>
-              Adicione a sua conta desse mês
-            </DialogDescription>
+            <DialogTitle>Editar conta do mês</DialogTitle>
+            <DialogDescription>Edite a sua conta desse mês</DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
@@ -112,7 +115,7 @@ export function Add() {
           </div>
           <DialogFooter>
             <Button type="submit" className="conta_button">
-              Adicionar
+              Atualizar
             </Button>
           </DialogFooter>
         </form>

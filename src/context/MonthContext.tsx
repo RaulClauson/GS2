@@ -9,6 +9,7 @@ type ElectronicData = {
 };
 
 type MonthData = {
+  id: number;
   gasto: number;
   consumo: number;
   valorKwh: number;
@@ -63,12 +64,14 @@ export function MonthProvider({ children }: { children: React.ReactNode }) {
           const mes = conta.mes.toLowerCase();
           if (!dataByMonth[mes]) {
             dataByMonth[mes] = {
+              id: conta.id,
               gasto: 0,
               consumo: 0,
               valorKwh: 0,
               eletronicos: [],
             };
           }
+          dataByMonth[mes].id = conta.id;
           dataByMonth[mes].gasto = conta.valor;
           dataByMonth[mes].consumo = conta.consumo;
           dataByMonth[mes].valorKwh = conta.custoKwh;

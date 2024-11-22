@@ -1,12 +1,15 @@
 "use client";
 
 import { Add } from "../Forms/Add/Add";
+import { Edit } from "../Forms/Edit/Edit";
 import { useEffect, useState } from "react";
 import "./Title.css";
 import { ComboboxDemo } from "@/components/ui/ComboBox";
+import { useMonthContext } from "@/context/MonthContext";
 
 const Title = () => {
   const [userName, setUserName] = useState("User");
+  const { monthData } = useMonthContext();
 
   useEffect(() => {
     const storedUserName = localStorage.getItem("userName");
@@ -25,7 +28,7 @@ const Title = () => {
       </div>
       <div className="date">
         <ComboboxDemo />
-        <Add />
+        {monthData ? <Edit /> : <Add />}
       </div>
     </div>
   );
