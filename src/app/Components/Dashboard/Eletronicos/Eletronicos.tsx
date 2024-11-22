@@ -44,7 +44,7 @@ const Eletronicos = () => {
       );
 
       if (response.ok) {
-        router.refresh();
+        window.location.reload();
       } else {
         console.error("Erro ao deletar eletrônico");
       }

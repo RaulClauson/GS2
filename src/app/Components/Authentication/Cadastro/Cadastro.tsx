@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React from "react";
+import InputMask from "react-input-mask";
 
 const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
   const router = useRouter();
@@ -66,14 +67,22 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
         </a>
       </fieldset>
       <input type="text" name="name" id="name" placeholder="Nome" required />
-      <input
+      <InputMask
+        mask="(99) 99999-9999"
         type="text"
         name="telefone"
         id="telefone"
         placeholder="Telefone"
         required
       />
-      <input type="text" name="CEP" id="CEP" placeholder="CEP" required />
+      <InputMask
+        mask="99999-999"
+        type="text"
+        name="CEP"
+        id="CEP"
+        placeholder="CEP"
+        required
+      />
       <input
         type="email"
         name="email"
