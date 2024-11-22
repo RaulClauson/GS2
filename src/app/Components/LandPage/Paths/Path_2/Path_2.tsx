@@ -56,6 +56,7 @@ const Path_2 = () => {
           strokeWidth="22"
           strokeLinecap="round"
           strokeLinejoin="round"
+          className="path2_2"
         />
       </svg>
     </>

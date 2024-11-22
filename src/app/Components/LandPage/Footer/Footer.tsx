@@ -3,6 +3,7 @@
 import Matter from "matter-js";
 import { useEffect, useRef } from "react";
 import "./Footer.css";
+import { HiArrowNarrowUp } from "react-icons/hi";
 
 const TriangleLogo = "/stickers/1.png";
 const ParallelogramLogo = "/stickers/2.png";
@@ -70,7 +71,7 @@ const Footer = () => {
       engine: engine,
       options: {
         width: window.innerWidth,
-        height: window.innerHeight * 0.6,
+        height: window.innerHeight * 0.7,
         wireframes: false,
         background: "transparent",
       },
@@ -105,7 +106,7 @@ const Footer = () => {
 
     // Create container walls
     const wallThickness = 100;
-    const containerHeight = window.innerHeight * 0.6;
+    const containerHeight = window.innerHeight * 0.7;
     const walls = [
       // Bottom
       Matter.Bodies.rectangle(
@@ -331,6 +332,19 @@ const Footer = () => {
   return (
     <div className="footer">
       <div ref={sceneRef} className="physics-container" />
+      <div className="footer_content">
+        <img
+          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732225851/Global%20Solution%202/Logo/hqmwveovjkttgedyruyr.png"
+          alt=""
+        />
+        <h6>BY LERAMI</h6>
+        <a href="">
+          <h3>
+            Voltar ao topo
+            <HiArrowNarrowUp />
+          </h3>
+        </a>
+      </div>
     </div>
   );
 };

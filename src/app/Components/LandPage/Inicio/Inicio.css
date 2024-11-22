@@ -65,7 +65,8 @@
   align-items: flex-start;
   z-index: 2;
 }
-#inicio img {
+#inicio .image,
+.image2 {
   width: -webkit-fill-available;
   height: 100lvh;
   display: flex;
@@ -92,4 +93,26 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+.logo_carousel {
+  position: absolute;
+  bottom: 0;
+  height: 20lvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+  padding: 0 2vh;
+}
+.slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.slick-slide div {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }

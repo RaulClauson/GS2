@@ -53,8 +53,11 @@ h3 {
   font-weight: 600;
   font-size: var(--font-size-l);
   line-height: 1.2;
-
-  color: var(--black);
+}
+h6 {
+  font-family: var(--font-neue);
+  font-weight: 400;
+  font-size: var(--font-size-s);
 }
 p {
   font-family: var(--font-neue);

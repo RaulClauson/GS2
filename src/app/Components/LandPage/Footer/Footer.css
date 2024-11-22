@@ -2,17 +2,19 @@
   width: 100%;
   height: 100lvh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   padding: 2vh;
 }
 .physics-container {
   width: 100%;
-  height: 60%;
+  height: 80%;
   background: url("https://res.cloudinary.com/dr0nki74e/image/upload/v1731863974/Global%20Solution%202/Stickers/s7qb6efm93uf7eppfepw.png");
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: 50% 50%;
+  margin-top: 66px;
 }
 @media (max-width: 888px) {
   .physics-container {
@@ -35,4 +37,26 @@ canvas {
   left: 0;
   right: 0;
   height: 60vh;
+}
+
+.footer_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 10%;
+  width: 100%;
+  padding: 0 var(--padding-vh);
+}
+.footer_content img {
+  height: 45%;
+}
+
+.footer_content h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer_content h3 svg {
+  color: var(--color);
 }

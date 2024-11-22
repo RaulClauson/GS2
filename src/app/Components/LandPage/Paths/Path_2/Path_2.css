@@ -16,3 +16,10 @@
   pointer-events: none;
   height: 100lvh;
 }
+
+@media (max-width: 1024px) {
+  .path2,
+  .path2_2 {
+    stroke-width: 18px;
+  }
+}

@@ -6,6 +6,9 @@ import React, { useEffect } from "react";
 import "./Inicio.css";
 import Path_1 from "../Paths/Path_1/Path_1";
 import Link from "next/link";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,10 +81,52 @@ const Inicio = () => {
         ease: "power3.inOut",
         duration: 0.8,
       });
+      gsap.to(".logo_carousel", {
+        scrollTrigger: {
+          trigger: "#inicio",
+          start: "1% top",
+          end: "10% top",
+          scrub: 1.5,
+          markers: false,
+        },
+        opacity: 0,
+        duration: 1,
+      });
     });
 
     return () => ctx.revert();
   }, []);
+
+  const logoSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false, // Added to remove arrows
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div id="inicio">
@@ -112,6 +157,53 @@ const Inicio = () => {
           <Link href="/Authentication">Conhecer</Link>
         </div>
         <div className="gradient"></div>
+        <div className="logo_carousel">
+          <Slider {...logoSettings}>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279396/Global%20Solution%202/Brands/m5fglla5dhbmnhwzhjbv.png"
+                alt="Logo 1"
+                style={{ width: "auto" }}
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279445/Global%20Solution%202/Brands/qgy5b9zgpebsjdwge8ga.png"
+                alt="Logo 2"
+                style={{ width: "auto" }}
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279485/Global%20Solution%202/Brands/rl2mfw2vocjauixzg3ru.png"
+                alt="Logo 3"
+                style={{ width: "auto" }}
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279536/Global%20Solution%202/Brands/i6m1ydif6o6awxbwvsir.png"
+                alt="Logo 4"
+                style={{ width: "auto" }}
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279553/Global%20Solution%202/Brands/d2npiuinzjoclgnbvgb8.png"
+                alt="Logo 5"
+                style={{ width: "auto" }}
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279566/Global%20Solution%202/Brands/ntaggrhlu32eeu4wommt.png"
+                alt="Logo 6"
+                style={{ width: "auto" }}
+              />
+            </div>
+            {/* Adicione mais logos conforme necessário */}
+          </Slider>
+        </div>
       </div>
     </div>
   );
