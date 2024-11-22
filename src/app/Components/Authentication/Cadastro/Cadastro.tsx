@@ -30,9 +30,6 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
         placeholder="Confirmar senha"
         required
       />
-      <p>
-        <span>Esqueceu sua senha?</span>
-      </p>
       <button type="submit">Cadastrar</button>
     </form>
   );

@@ -1,3 +1,4 @@
+import { Add } from "../Forms/Add/Add";
 import "./Title.css";
 import { ComboboxDemo } from "@/components/ui/ComboBox";
 
@@ -12,6 +13,7 @@ const Title = () => {
       </div>
       <div className="date">
         <ComboboxDemo />
+        <Add />
       </div>
     </div>
   );

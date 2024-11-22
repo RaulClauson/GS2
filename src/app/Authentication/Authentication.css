@@ -1,7 +1,8 @@
 #authentication {
   display: flex;
   gap: 2vh;
-  height: 96vh;
+  height: 100lvh;
+  padding: 2vh;
 }
 div {
   display: flex;

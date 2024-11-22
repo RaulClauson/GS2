@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import "./Header.css";
+import Link from "next/link";
 
 const Header = () => {
   const [hide, setHide] = useState(false);
@@ -35,7 +36,7 @@ const Header = () => {
           <a href=""></a>
         </div>
         <div className="entrar">
-          <button>Entrar</button>
+          <Link href="/Authentication">Entrar</Link>
         </div>
       </nav>
     </header>

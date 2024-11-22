@@ -66,27 +66,6 @@ span {
   color: var(--color);
   font-weight: 700;
 }
-button {
-  width: 133px;
-  height: 44px;
-
-  background: var(--color);
-  border-radius: var(--br-s);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: var(--font-neue);
-  font-weight: 700;
-  font-size: var(--font-size-s);
-
-  color: var(--black);
-}
-button:hover {
-  background: var(--black);
-  color: var(--white);
-}
 
 @layer utilities {
   .text-balance {
