@@ -30,3 +30,9 @@
   background-color: var(--white);
   color: var(--black);
 }
+
+@media (max-width: 888px) {
+  .add_content {
+    width: 370px;
+  }
+}

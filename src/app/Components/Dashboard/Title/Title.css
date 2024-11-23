@@ -32,3 +32,10 @@ h1 {
   align-items: center;
   gap: var(--gap-s);
 }
+
+@media (max-width: 888px) {
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
