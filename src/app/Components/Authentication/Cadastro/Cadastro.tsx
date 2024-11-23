@@ -18,11 +18,14 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
       return;
     }
 
+    const telefone = formData.get("telefone")?.toString().replace(/\D/g, "");
+    const cep = formData.get("CEP")?.toString().replace(/\D/g, "");
+
     const data = {
       emailUs: formData.get("email"),
       nome: formData.get("name"),
-      telefone: formData.get("telefone"),
-      cepUs: formData.get("CEP"),
+      telefone: telefone,
+      cepUs: cep,
       senha: password,
     };
 
@@ -42,19 +45,10 @@ const Cadastro = ({ setIsLogin }: { setIsLogin: (value: boolean) => void }) => {
 
         router.push("/Dashboard");
       } else {
-        localStorage.setItem("userName", data.nome as string);
-        localStorage.setItem("userEmail", data.emailUs as string);
-        localStorage.setItem("logado", "true");
-
-        router.push("/Dashboard");
+        alert("Erro ao cadastrar");
       }
     } catch (error) {
       console.error("Erro:", error);
-      localStorage.setItem("userName", data.nome as string);
-      localStorage.setItem("userEmail", data.emailUs as string);
-      localStorage.setItem("logado", "true");
-
-      router.push("/Dashboard");
     }
   };
 

@@ -22,11 +22,35 @@ export function Add() {
   const [consumo, setConsumo] = useState("");
   const { selectedMonth, monthlyData } = useMonthContext();
 
-  // Função para gerar ID aleatório de 4 dígitos
-  const generateId = () => {
-    const min = 1000; // Menor número de 4 dígitos
-    const max = 9999; // Maior número de 4 dígitos
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  // Função para encontrar o próximo ID disponível
+  const findNextAvailableId = async (userEmail: string) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/rest/conta/usuario/${userEmail}`
+      );
+      if (!response.ok) return 1000; // Começa com 1000 se não houver dados
+
+      const contas = await response.json();
+      if (!contas.length) return 1000;
+
+      // Ordena os IDs existentes
+      const existingIds = contas
+        .map((conta: any) => conta.id)
+        .sort((a: number, b: number) => a - b);
+
+      // Encontra o primeiro ID disponível
+      let nextId = 1000;
+      while (nextId <= 9999) {
+        if (!existingIds.includes(nextId)) {
+          return nextId;
+        }
+        nextId++;
+      }
+      throw new Error("Não há IDs disponíveis");
+    } catch (error) {
+      console.error("Erro ao buscar IDs:", error);
+      return 1000;
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -35,38 +59,57 @@ export function Add() {
     const userEmail = localStorage.getItem("userEmail");
     if (!userEmail) return;
 
-    // Gera um ID de 4 dígitos
-    const newId = generateId();
+    let newId = await findNextAvailableId(userEmail);
 
-    try {
-      const response = await fetch("http://localhost:8080/api/rest/conta", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: newId,
-          valor: parseFloat(valor),
-          consumo: parseFloat(consumo),
-          custoKwh: parseFloat(
-            (parseFloat(valor) / parseFloat(consumo)).toFixed(2)
-          ),
-          mes: selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1),
-          usuario: userEmail,
-        }),
-      });
+    const attemptSave = async (id: number) => {
+      try {
+        const response = await fetch("http://localhost:8080/api/rest/conta", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: id,
+            valor: parseFloat(valor),
+            consumo: parseFloat(consumo),
+            custoKwh: parseFloat(
+              (parseFloat(valor) / parseFloat(consumo)).toFixed(2)
+            ),
+            mes: selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1),
+            usuario: userEmail,
+          }),
+        });
 
-      if (response.ok) {
-        setValor("");
-        setConsumo("");
-        setOpen(false);
-        window.location.reload();
-      } else {
-        console.error("Erro ao adicionar conta");
+        if (response.ok) {
+          setValor("");
+          setConsumo("");
+          setOpen(false);
+          window.location.reload();
+          return true; // Salvo com sucesso
+        } else {
+          console.error(
+            `Erro ao adicionar conta com ID ${id}. Tentando outro...`
+          );
+          return false; // Falha no salvamento
+        }
+      } catch (error) {
+        console.error(`Erro ao enviar dados com ID ${id}:`, error);
+        return false;
       }
-    } catch (error) {
-      console.error("Erro ao enviar dados:", error);
+    };
+
+    // Tentativa de salvar com diferentes IDs, limitado a 10 tentativas
+    let attempts = 0;
+    const maxAttempts = 10; // Número máximo de tentativas
+
+    while (newId <= 9999 && attempts < maxAttempts) {
+      const success = await attemptSave(newId);
+      if (success) return; // Sai do loop se salvar com sucesso
+      newId++; // Incrementa para o próximo ID
+      attempts++; // Incrementa o contador de tentativas
     }
+
+    console.error("Não foi possível adicionar a conta. IDs esgotados.");
   };
 
   return (
