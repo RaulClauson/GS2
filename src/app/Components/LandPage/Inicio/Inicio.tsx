@@ -161,42 +161,42 @@ const Inicio = () => {
           <Slider {...logoSettings}>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279396/Global%20Solution%202/Brands/m5fglla5dhbmnhwzhjbv.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/akbhleafknfuz8g1ktia.png"
                 alt="Logo 1"
                 style={{ width: "auto" }}
               />
             </div>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279445/Global%20Solution%202/Brands/qgy5b9zgpebsjdwge8ga.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/c3pa255a2bnfnjogknsw.png"
                 alt="Logo 2"
                 style={{ width: "auto" }}
               />
             </div>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279485/Global%20Solution%202/Brands/rl2mfw2vocjauixzg3ru.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/bg3jwzidgmqjusmyzwau.png"
                 alt="Logo 3"
                 style={{ width: "auto" }}
               />
             </div>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279536/Global%20Solution%202/Brands/i6m1ydif6o6awxbwvsir.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/so3ny3osfqqftxea6p0u.png"
                 alt="Logo 4"
                 style={{ width: "auto" }}
               />
             </div>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279553/Global%20Solution%202/Brands/d2npiuinzjoclgnbvgb8.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/p3ryrou3ndclaind1qow.png"
                 alt="Logo 5"
                 style={{ width: "auto" }}
               />
             </div>
             <div>
               <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732279566/Global%20Solution%202/Brands/ntaggrhlu32eeu4wommt.png"
+                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/nmklhrzll7tsmhdz4r9u.png"
                 alt="Logo 6"
                 style={{ width: "auto" }}
               />
