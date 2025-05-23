@@ -27,10 +27,7 @@ const Authentication = () => {
     <section id="authentication">
       <div>
         <a href="/" className="logo">
-          <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732225851/Global%20Solution%202/Logo/hqmwveovjkttgedyruyr.png"
-            alt=""
-          />
+          <img src="img/Logo.png" alt="" />
         </a>
         {isLogin ? (
           <Login setIsLogin={setIsLogin} />
@@ -39,10 +36,7 @@ const Authentication = () => {
         )}
       </div>
       <div className="image">
-        <img
-          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1731705806/Global%20Solution%202/Authentication/ygsa04pc7d1y059xlfnd.png"
-          alt=""
-        />
+        <img src="img/Authentication.png" alt="" />
       </div>
     </section>
   );

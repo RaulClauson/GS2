@@ -24,6 +24,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "gs": "file:",
     "gsap": "^3.12.5",
     "lucide-react": "^0.460.0",
     "matter-js": "^0.20.0",

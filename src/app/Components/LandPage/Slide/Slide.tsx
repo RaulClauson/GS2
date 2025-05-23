@@ -148,19 +148,19 @@ const Slide = () => {
         </div>
         <div className="slide-content-img">
           <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732150849/Global%20Solution%202/Slide/jslzpfjethgzcbtjxhcx.png"
+            src="img/Slide1.png"
             alt=""
             className="slide_img1"
             style={{ width: "0%" }}
           />
           <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732202264/Global%20Solution%202/Slide/hl5salvkydgs9hkzvmbj.jpg"
+            src="img/Slide2.png"
             alt=""
             className="slide_img2"
             style={{ width: "0%" }}
           />
           <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732202112/Global%20Solution%202/Slide/rded2emc6okdpmpuboqe.jpg"
+            src="img/Slide3.png"
             alt=""
             className="slide_img3"
             style={{ width: "0%" }}

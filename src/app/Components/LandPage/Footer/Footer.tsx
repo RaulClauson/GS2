@@ -333,10 +333,7 @@ const Footer = () => {
     <div className="footer">
       <div ref={sceneRef} className="physics-container" />
       <div className="footer_content">
-        <img
-          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732225851/Global%20Solution%202/Logo/hqmwveovjkttgedyruyr.png"
-          alt=""
-        />
+        <img src="img/Logo.png" alt="" />
         <h6>BY LERAMI</h6>
         <a href="">
           <h3>

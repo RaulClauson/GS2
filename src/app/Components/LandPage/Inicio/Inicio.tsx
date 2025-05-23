@@ -133,7 +133,7 @@ const Inicio = () => {
       <div className="pin_container">
         <img
           className="image"
-          src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732200384/Global%20Solution%202/Start/u8k6kzellhg9cf1ueer0.jpg"
+          src="img/Hero.png"
           alt="Fonte de energia limpa - Eólica"
           style={{ height: "80lvh", transform: "scale(1)" }}
         />
@@ -160,46 +160,22 @@ const Inicio = () => {
         <div className="logo_carousel">
           <Slider {...logoSettings}>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/akbhleafknfuz8g1ktia.png"
-                alt="Logo 1"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/1.png" alt="Logo 1" style={{ width: "auto" }} />
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/c3pa255a2bnfnjogknsw.png"
-                alt="Logo 2"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/2.png" alt="Logo 2" style={{ width: "auto" }} />
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/bg3jwzidgmqjusmyzwau.png"
-                alt="Logo 3"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/3.png" alt="Logo 3" style={{ width: "auto" }} />
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/so3ny3osfqqftxea6p0u.png"
-                alt="Logo 4"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/4.png" alt="Logo 4" style={{ width: "auto" }} />
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/p3ryrou3ndclaind1qow.png"
-                alt="Logo 5"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/5.png" alt="Logo 5" style={{ width: "auto" }} />
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732280424/Global%20Solution%202/Brands/nmklhrzll7tsmhdz4r9u.png"
-                alt="Logo 6"
-                style={{ width: "auto" }}
-              />
+              <img src="logos/6.png" alt="Logo 6" style={{ width: "auto" }} />
             </div>
             {/* Adicione mais logos conforme necessário */}
           </Slider>

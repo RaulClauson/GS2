@@ -39,10 +39,7 @@ const Team = () => {
       </h1>
       <div className="team_integrants">
         <div className="team_integrant">
-          <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732195150/Global%20Solution%202/Team/jocx8ws9shauqo3mak6w.png"
-            alt="Leonardo José"
-          />
+          <img src="img/Leo.png" alt="Leonardo José" />
           <div className="team_integrant_text">
             <h3>
               Leonardo José
@@ -62,10 +59,7 @@ const Team = () => {
           </div>
         </div>
         <div className="team_integrant">
-          <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732195150/Global%20Solution%202/Team/lxiul5bhpkcgtweow961.png"
-            alt="Raul Clauson"
-          />
+          <img src="img/Raul.png" alt="Raul Clauson" />
           <div className="team_integrant_text">
             <h3>
               Raul Clauson
@@ -85,10 +79,7 @@ const Team = () => {
           </div>
         </div>
         <div className="team_integrant">
-          <img
-            src="https://res.cloudinary.com/dr0nki74e/image/upload/v1732195150/Global%20Solution%202/Team/wdsyj39riy9fn2wpwrmv.png"
-            alt="Mirian Bronzati"
-          />
+          <img src="img/Mirian.png" alt="Mirian Bronzati" />
           <div className="team_integrant_text">
             <h3>
               Mirian Bronzati
